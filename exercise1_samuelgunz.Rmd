@@ -1,0 +1,41 @@
+---
+title: "Example/RMarkdown"
+author: "Samuel Gunz"
+date: "18 9 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+### Samples form a log normal distribution
+
+Generating 100 samples from a log normal distribution
+
+```{r lognorm}
+x <- rlnorm(100,1,0.25)
+```
+
+### Plot of the distribution
+
+
+```{r hist}
+hist(x)
+```
+
+### The plot of the distribution on the log scale
+```{r loghist}
+hist(log(x))
+```
+
+### Evaluating the mean and variance of our sample
+
+```{r meanvar}
+meanx <- mean(x)
+varx <- var(x)
+
+```
+
+The mean of the sample is **`r meanx`**  and variance of the sample is **`r varx`**
